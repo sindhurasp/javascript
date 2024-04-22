@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>document</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .container {
+        text-align: center;
+    }
+    .product-image {
+        max-width: 200px;
+    }
+</style>
+</head>
+<body>
+<aside class="container">
+    <div class="product-details">
+        <img src="https://cdn.pixabay.com/photo/2022/01/19/21/10/food-6950991_1280.jpg" alt="Product Image" class="product-image">
+        <div>
+            <p>Price = RS <span id="price">200</span></p>
+            <p>Quantity = <button id="decrement">-</button><span id="quantity">1</span><button id="increment">+</button></p>
+            <p>Discount = 33%</p>
+            <p>Discount Price = RS <span id="discount-price">134</span></p>
+            <p>Delivery = 5%</p>
+            <p>Delivery Charge = RS <span id="delivery-charge">6.7</span></p>
+            <p>Total Sum = RS <span id="total-sum">140.7</span></p>
+        </div>
+    </div>
+</aside>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const decrementBtn = document.getElementById("decrement");
+        const incrementBtn = document.getElementById("increment");
+        const quantityDisplay = document.getElementById("quantity");
+        const priceDisplay = document.getElementById("price");
+        const discountPriceDisplay = document.getElementById("discount-price");
+        const deliveryChargeDisplay = document.getElementById("delivery-charge");
+        const totalSumDisplay = document.getElementById("total-sum");
+
+        let quantity = 1;
+
+        decrementBtn.addEventListener("click", function() {
+            if (quantity > 1) {
+                quantity--;
+                updateValues();
+            }
+        });
+
+        incrementBtn.addEventListener("click", function() {
+            quantity++;
+            updateValues();
+        });
+
+        function updateValues() {
+            quantityDisplay.textContent = quantity;
+            const price = 200 * quantity;
+            priceDisplay.textContent = price;
+            const discountPrice =price - price * 0.20; // 33% discount
+            discountPriceDisplay.textContent = discountPrice.toFixed(2);
+            const deliveryCharge = price * 0.05;
+            deliveryChargeDisplay.textContent = deliveryCharge.toFixed(2);
+            const totalSum = discountPrice + deliveryCharge;
+            totalSumDisplay.textContent = totalSum.toFixed(2);
+        }
+    });
+   
+</script>
+</body>
+</html>
+    
+</body>
+</html>

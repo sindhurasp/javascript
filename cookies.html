@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgba(34,193,195);
+            background:linear-gradient(0deg,rgba(34,193,195,1) 0%,rgba(121,32,153,1) 86%);
+            background-attachment: fixed;
+        }
+        div{
+            border: 2px solid black;
+            height:400px;
+            width:400px;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+            top: 70px;
+            background-color:whitesmoke;
+        }
+        label,input{
+            position:relative;
+            left:20px;
+            top:10px;
+            font-size: large;
+        }
+        h1{
+            position: relative;
+            left:100px;
+            color:blueviolet;
+         }
+         #button{
+            position: relative;
+            left:100px;
+            top:3px;
+            font-size: large;
+            color: blueviolet;
+         } 
+         h3{
+            font-size: small;
+            position: relative;
+            left:20px;
+            color: red;
+         }
+         
+    </style>
+</head>
+<body>
+    <div>
+        <h1>LOGIN</h1>
+    <label for="name">Name :</label>
+    <input type="text" id="name"><br><br>
+    <h3 id="nameError"></h3>
+    <label for="email">Email:</label>
+    <input type="text" id="email"><br><br>
+    <h3 id="emailError"></h3>
+    <label for="phone">Phone no:</label>
+    <input type="text" id="phone"><br><br>
+    <h3 id="phonenoError"></h3>
+    <label for="pass">Password</label>
+    <input type="text" id="pass"><br><br>
+    <h3 id="passError"></h3>
+    <label for="cpass">Confirm password</label>
+    <input type="text" id="cpass"><br><br>
+    <h3 id="cpassError"></h3>
+    <input type="submit" id="button"> &nbsp;
+    <input type="Reset" id="button">
+    </div>
+
+
+    <script src="./cookies.js"></script>
+</body>
+</html>

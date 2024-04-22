@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        form{
+           
+           border:2px solid black;
+            font-size:xx-large;
+            background-color:black
+        
+        }
+        
+    .buttons input{
+                border-radius: 80%;
+                font-size:large;
+                font-weight: 100;
+                height: 45px;
+                width:45px;
+             }
+             #main input{
+                font-size: large;
+                height: 30px;
+                width: 200px;
+                position: relative;
+                top:10px;
+        
+            }
+
+    </style>
+</head>
+<body>
+    <form>
+        <div id="main"> 
+            <input type="text" name="name" id="ans"></div>
+       <div class="buttons">
+            <div>
+                <input type="button" value="1" onclick="ans.value+=`1`">
+                <input type="button" value="2" onclick="ans.value+=`2`">
+                <input type="button" value="3" onclick="ans.value+=`3`">
+                <input type="button" value="+" onclick="ans.value+=`+`">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="ans.value+=`4`">
+                <input type="button" value="5" onclick="ans.value+=`5`">
+                <input type="button" value="6" onclick="ans.value+=`6`">
+                <input type="button" value="-" onclick="ans.value+=`-`">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="ans.value+=`7`">
+                <input type="button" value="8" onclick="ans.value+=`8`">
+                <input type="button" value="9" onclick="ans.value+=`9`">
+                <input type="button" value="*" onclick="ans.value+=`*`">
+            </div>
+            <div>
+                <input type="button" value="0" onclick="ans.value+=`0`">
+                <input type="button" value="." onclick="ans.value+=`.`">
+                <input type="button" value="=" onclick="ans.value=eval(ans.value)">
+                <input type="button" value="/" onclick="ans.value+=`/`">
+            </div>
+            <div>
+                <input type="button" value="sin()" onclick="ans.value=eval(Math.sin(ans.value))">
+                <input type="button" value="tan()" onclick="ans.value=eval(Math.tan(ans.value))">
+                <input type="button" value="cos()" onclick="ans.value=eval(Math.cos(ans.value))">
+                <input type="button" value="PI" onclick="ans.value+=Math.PI">
+            </div>
+            </div>
+        
+    </form>  
+</body>
+</html>
